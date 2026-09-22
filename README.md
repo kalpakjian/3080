@@ -49,7 +49,30 @@ python check_and_upgrade_pytorch.py
 python -c "import torch; print(f'PyTorch: {torch.__version__}'); print(f'CUDA: {torch.version.cuda}'); print(f'GPU: {torch.cuda.is_available()}')"
 ```
 
-## 📋 手動安裝命令
+### 方法二：一鍵執行（推薦）
+
+**Windows：**
+
+```bash
+quick_upgrade.bat
+```
+
+或直接雙擊 `quick_upgrade.bat` 文件
+
+**Linux / macOS：**
+
+```bash
+./quick_upgrade.sh
+```
+
+這個腳本會自動：
+- 檢測 NVIDIA 驅動版本
+- 選擇合適的 CUDA 版本
+- 卸載舊版 PyTorch
+- 安裝最新版
+- 驗證安裝結果
+
+
 
 如果不想使用腳本，可以手動執行：
 
